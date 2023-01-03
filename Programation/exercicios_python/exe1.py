@@ -4,13 +4,13 @@ informe se este número é par ou ímpar. Caso o usuário não digite um número
 inteiro, informe que não é um número inteiro.
 """
 
-n1 = input("Digite um número inteiro: ")
+num = input("Digite um número inteiro: ")
 
 int_n1 = None
 valor = None
 
-if n1.isdigit():
-    int_n1 = int(n1)
+if num.isdigit():
+    int_n1 = int(num)
     valor = int_n1 
 
 if valor is None:
