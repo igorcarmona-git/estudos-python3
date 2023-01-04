@@ -7,6 +7,9 @@ while True:
 
     numeros_validos = None # Flag
 
+    num_1_float = 0
+    num_2_float = 0
+
     try:
         num_1_float = float(numero_1)
         num_2_float = float(numero_2)
