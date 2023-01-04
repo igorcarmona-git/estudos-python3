@@ -20,6 +20,8 @@ while True:
 
     operadores_permitidos = '+-/*'
 
+    ################################################## CONDICIONAIS DE VALIDAÇÃO ############################################################
+
     # Verifica se o que os operadores que usuário digitou não estiver entre os permitidos.  
     if operador not in operadores_permitidos:
         print('Operador inválido.')
@@ -29,6 +31,8 @@ while True:
     if len(operador) > 1:
         print('Digite apenas um operador.')
         continue
+
+    ##############################################################################################################################################
 
     print('Realizando a sua conta. Confira o resultado abaixo:')
 
@@ -48,4 +52,4 @@ while True:
     sair = input('Quer sair? [s]im: ').lower().startswith('s') 
 
     if sair is True:
-        break #Sai do laço while
+        break   #Sai do laço while

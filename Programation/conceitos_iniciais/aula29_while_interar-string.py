@@ -15,10 +15,10 @@ while i < len(frase):
     letra_atual = frase[i]
 
     if letra_atual == ' ':
-        i += 1  #Se não incrementar antes do "continue", ele nunca irá incrementar o 'i', entra no loop infinito.
-        continue #Volta para o ínicio do laço while
+        i += 1      #Se não incrementar antes do "continue", ele nunca irá incrementar o 'i', entra no loop infinito.
+        continue    #Volta para o ínicio do laço while
 
-    qtd_atual = frase.count(letra_atual) #conta quantas vezes aparece a letra na frase
+    qtd_atual = frase.count(letra_atual)    #conta quantas vezes aparece a letra na frase
 
     if qtd_salvo <= qtd_atual:
         qtd_salvo = qtd_atual
