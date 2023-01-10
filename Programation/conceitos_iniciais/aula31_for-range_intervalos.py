@@ -11,4 +11,3 @@ print()
 
 for num in numeros: #--> variável 'num' é criada, o 'for' solicita para 'numeros' seu iterador em que vai armazenar seus valores em 'num'. 
     print(num)
-

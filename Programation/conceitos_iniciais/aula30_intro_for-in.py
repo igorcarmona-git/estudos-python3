@@ -17,7 +17,6 @@ while True:
 
     break
     
-
 print(f"Tentativas executadas: {repeticoes}")
 print("O laço tem repetições infinitas")
 print()
