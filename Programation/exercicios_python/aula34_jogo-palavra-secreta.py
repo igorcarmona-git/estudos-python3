@@ -14,6 +14,7 @@ na palavra secreta.
 Faça a contagem de tentativas do seu
 usuário.
 """
+import os
 
 print("#### --> Jogo da palavra secreta! <-- ###")
 
@@ -53,7 +54,8 @@ while True:
     print(f"Palavra formada: {palavra_formada}") #Colocado print fora do for para imprimir a palavra na horizontal
 
     if palavra_formada == secreto:
-        print()
+        os.system('cls') #Limpa a tela do terminal
+
         print("VOCÊ GANHOU!! PARABÉNS!!")
         print()
         print(f"A palavra era: {secreto}")
