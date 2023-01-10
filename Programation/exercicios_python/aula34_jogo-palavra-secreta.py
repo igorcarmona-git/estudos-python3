@@ -22,11 +22,19 @@ secreto = "aprendizado"
 letras_acertadas = ""
 
 tentativas = 0
+tentativas_permitidas = len(secreto) + 5
 num_letra = 0
 
 while True:
     letra_digitada = input("Digite uma letra: ")
     num_letra = len(letra_digitada)
+
+    if tentativas == tentativas_permitidas:
+        os.system('cls')
+        print("Você EXCEDEU o seu número de tentativas permitidas")
+        print("Tente novamente!")
+        
+        break
 
     if num_letra > 1:
         print()
