@@ -22,7 +22,7 @@ secreto = "aprendizado"
 letras_acertadas = ""
 
 tentativas = 0
-tentativas_permitidas = len(secreto) + 5
+tentativas_permitidas = len(secreto) + 3
 num_letra = 0
 
 while True:
