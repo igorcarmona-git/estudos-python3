@@ -19,7 +19,7 @@ import os
 print("#### --> Jogo da palavra secreta! <-- ###")
 
 secreto = "aprendizado"
-letras_acertadas = ""
+letras_acertadas = "" #Banco letras certas
 
 tentativas = 0
 tentativas_permitidas = len(secreto) + 3
