@@ -1,4 +1,6 @@
 """
+CÁLCULO DO PRIMEIRO DIGITO DO CPF.
+
 CPF: 746.824.890-70
 Colete a soma dos 9 primeiros dígitos do CPF multiplicando cada um dos valores por uma contagem regressiva começando de 10.
 
@@ -23,7 +25,23 @@ contrário disso:
 
 O primeiro dígito do CPF é 7
 """
+
 digitos = input("Digite o seu CPF: ")
+
+if digitos == '':
+    print(f"Você não digitou nada! Digite um CPF.\n")
+    exit()
+elif not digitos.isdigit():
+    print("Você digitou apenas letras! Digite somente números de um CPF válido.")
+    exit()
+elif len(digitos) < 11:
+    print("Você digitou números insuficientes para ser um CPF válido. Digite novamente!")
+    exit()
+elif len(digitos) > 11:
+    print("Você digitou números acima do permitido! Digite um CPF válido!")
+    exit()
+else:
+    print("Erro desconhecido!")
 
 digitosFinais = [] 
 
@@ -74,7 +92,7 @@ if restoDivisao > 9:
 else:
     total = restoDivisao
 
-print(restoDivisao)
+print(total)
 
 
 
