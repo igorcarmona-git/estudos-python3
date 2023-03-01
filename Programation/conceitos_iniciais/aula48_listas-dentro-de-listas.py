@@ -23,3 +23,11 @@ for sala in salas:
     print(f'A Sala é {sala}')
     for aluno in sala:
         print(aluno)
+
+########################### Outro exemplo ################################
+
+numeros = [1, 2, 3, 4]
+nomes = ['Alice', 'Bob', 'Carol', 'Dave']
+
+for numero, nome in zip(numeros, nomes):
+    print(f'{numero}: {nome}')

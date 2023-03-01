@@ -14,3 +14,37 @@ print(nome1, _) #'_' --> printa uma nova lista com o restante não desempacotado
 
 _, nome2, *_ = ["Maria", "Helena", "Luiz"]
 print(nome2, _)
+
+######################### Outro exemplo #####################################################################################
+
+string = 'ABCD'
+lista = ['Fernando', 'Gustavo', 1, 2, 3, 'Igor']
+tupla = ('Python', 'é', 'legal')
+
+primeiro, segundo, *_, antiPenultimo, ultimo = lista 
+print(primeiro, ultimo, antiPenultimo)
+print(f"Aqui eu estou pegando o resto: {_}")
+
+##################################################################################################################################
+########################### --> Desempacotamento em chamadas de métodos e funções <-- ############################################
+
+print("\n")
+
+salas = [
+    #0            1
+    ["Maria", "Helena"], #0
+    ["Elaine"], #1
+    #0         1        2            
+    ["Luiz", "João", "Eduarda"] #2]
+]
+
+string = 'ABCD'
+lista = ['Fernando', 'Gustavo', 1, 2, 3, 'Igor']
+
+print(*salas) #Passa lista por lista para dentro do print
+print(*lista) # Passa um argumento de cada vez para dentro do print
+print(*string) #Passa caractere por caractere para dentro do print
+
+print('\n')
+
+print(*salas, sep='\n') #Passa lista por lista para dentro do print e separa elas pulando linha

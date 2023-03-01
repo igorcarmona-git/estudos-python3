@@ -1,6 +1,6 @@
 import requests
 
-alvo = "https://faculdadefacec.edu.br/"
+alvo = "https://www.unipar.br/"
 
 # wordlist = ["admin", "login", "portal", "css", "responsive"]
 wordlist = open('prog-python/seclists/directory-list-2.3-small.txt', 'r')
