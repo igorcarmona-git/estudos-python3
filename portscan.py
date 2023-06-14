@@ -12,6 +12,7 @@ ports = [21,22,80,443,445,3306,25]
 list_codes = []
 
 for port in ports:
+	# 								IP 					TCP 			Protocolo TCP/IP
 	client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 	#passa o tempo que ele vai esperar a conexão. '0.1' milisegundos
