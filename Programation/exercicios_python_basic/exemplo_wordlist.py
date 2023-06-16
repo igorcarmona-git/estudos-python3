@@ -3,7 +3,7 @@ import requests
 alvo = "https://www.unipar.br/"
 
 # wordlist = ["admin", "login", "portal", "css", "responsive"]
-wordlist = open('prog-python/seclists/directory-list-2.3-small.txt', 'r')
+wordlist = open(r'C:\\Users\\igorc\\Desktop\\CodesProg\\geral-codes\\prog-python\\seclists\\directory-list-2.3-small.txt', 'r')
 
 requisicoes_aceitas = []
 
@@ -21,5 +21,9 @@ print()
 wordlist.close()
 
 print("LISTA DE REQUISIÇÕES QUE FORAM ACEITAS")
+
+file = open('C:\\Users\\igorc\\Desktop\\CodesProg\\geral-codes\\prog-python\\seclists\\r-accepts', 'x')
 for requisicao in requisicoes_aceitas:
-  print(requisicao)
+  file = f"{requisicao}".splitlines()
+
+file.close()
