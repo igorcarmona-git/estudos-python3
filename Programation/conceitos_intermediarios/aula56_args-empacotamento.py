@@ -4,7 +4,7 @@ args - ARGUMENTOS NÃO NOMEADOS (Importante serem não nomeados)
 * - *args (Empacotamento e Desempacotamento)
 """
 
-#Lmebre-se de desempacotamento
+#Lembre-se de desempacotamento
 x, y, *resto = 1, 2, 3, 4
 print(x, y, resto)
 
