@@ -50,4 +50,4 @@ print()
 
 #Voce pode utilizar a leitura do dicionario também em laço:
 for chave in pessoa3:
-    print(chave, pessoa3[chave])
+    print(chave, pessoa3[chave]) #'pessoa3[chave] --> retorna o valor de dentro da chave'

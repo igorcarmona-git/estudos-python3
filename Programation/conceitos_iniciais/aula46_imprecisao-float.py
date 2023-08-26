@@ -15,6 +15,7 @@ print(number3)
 
 print()
 ####################### Como contornar esse problema #######################
+
 # FORMA 1:
 print(f'{number3:.2f}\n') # formata o texto dentro da string, mas retorna um tipo string. 
 

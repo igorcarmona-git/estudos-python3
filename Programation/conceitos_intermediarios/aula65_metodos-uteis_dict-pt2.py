@@ -8,7 +8,7 @@ p1 = {
 }
 
 #print(p1['nome'])
-print(p1.get('nome', 'Not Available'))
+print(p1.get('nome', 'Not Available')) # --> Se não tiver chave 'nome', retorna padrão 'Not available'
 
 # nome = p1.pop('nome') # --> Elimina a chave do dicionário
 # print(f'\n \n {nome}')# --> printa a chave eliminada

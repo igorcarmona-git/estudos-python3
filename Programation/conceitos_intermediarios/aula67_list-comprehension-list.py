@@ -24,7 +24,7 @@ print(pares)
 ######################################################################################################################
 
 mensagem = "Olá, mundo!"
-caracteres = [c for c in mensagem]
+caracteres = [char for char in mensagem]
 
 print(caracteres)
 

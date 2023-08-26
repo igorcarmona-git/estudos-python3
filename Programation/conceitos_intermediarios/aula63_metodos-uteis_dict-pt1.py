@@ -28,8 +28,7 @@ print(pessoa.__len__())
 print(len(pessoa))
 print('\n\n')
 
-#Dunder method --> refere-se a um conjunto especial conhecidos como "métodos mágicos" ou "métodos especiais". Esses métodos são amplamente 
-#utilizados para sobrecarregar operadores e fornecer comportamento personalizado para classes definidas pelo usuário.
+#Dunder method --> refere-se a um conjunto especial conhecidos como "métodos mágicos" ou "métodos especiais". Esses métodos são amplamente utilizados para sobrecarregar operadores e fornecer comportamento personalizado para classes definidas pelo usuário.
 
 print(pessoa.keys()) #retorna um dicionário de chaves
 print(list(pessoa.keys())) #converte dicionário para lista
@@ -44,4 +43,4 @@ for valor in pessoa.values():
 print('\n')
 
 for chave, valor in pessoa.items():
-    print(chave, valor)
+    print(f'{chave}: {valor}')

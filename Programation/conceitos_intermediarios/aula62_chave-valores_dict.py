@@ -33,5 +33,8 @@ print(pessoa2[chave])
 if pessoa2.get('nome_completo') is None: #Por padrão, retorna 'None' se a chave não existir
     print('Não Existe!')
 
+if pessoa2.get('sobrenome') is None:
+    print('Não existe esta chave')
+
 #Obs: Se voce não usar o get, fazer algo do tipo if pessoa2['sobrenome'], não para a exceção se não existir a chave, seu programa vai
 #acusar um erro de KeyError. 

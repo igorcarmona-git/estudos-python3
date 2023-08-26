@@ -5,7 +5,7 @@ import copy
 
 d1 = {
     'c1': 1,
-    'c2': 2
+    'c2': 2,
 }
 
 d2 = d1 #valores mutáveis ou listas

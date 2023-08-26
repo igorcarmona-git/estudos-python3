@@ -9,7 +9,7 @@ Tipo list - Mutável
 #        -54321
 string = 'ABCDE'  # 5 caracteres (len)
 
-# print(bool([]))  # falsy
+print(bool([]))  # falsy
 # print(lista, type(lista))
 
 #        0    1      2              3    4

@@ -30,4 +30,4 @@ numeros = [1, 2, 3, 4]
 nomes = ['Alice', 'Bob', 'Carol', 'Dave']
 
 for numero, nome in zip(numeros, nomes):
-    print(f'{numero}: {nome}')
+    print(f'{numero} {nome}')
