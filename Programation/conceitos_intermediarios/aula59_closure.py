@@ -26,4 +26,4 @@ for nome in ['Igor', 'Fernando', 'Gustavo', 'Henrique', 'Kleber', 'Daiane']:
 # OBS: Com closure, enquanto a função não é fechada, ele guarda o valor na memória até a função ser fechada, fazendo com que force o 
 #      Python a guardar os valores para resolver ela depois. 
 
-# Isso tipo de coisa é utilizado em paradigma de programação funcional 
+# Esse tipo de coisa é utilizado em paradigma de programação funcional 

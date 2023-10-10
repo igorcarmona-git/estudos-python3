@@ -1,70 +1,70 @@
 import time
 import random
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import NoSuchElementException
 
-def tempo_variado():
-    tempo_espera = random.randint(5, 200)
-    time.sleep(tempo_espera)
+def random_time():
+    waitTime = random.randint(3, 10)
+    time.sleep(waitTime)
 
-def comentar_post(usernamesList, url_post):
-    navegador.get(url_post)
+def randomTime_large():
+    largeTime = random.randint(120, 600)
+    time.sleep(largeTime)
+
+def toComment_post(usernamesList, url_post):
+    browser.get(url_post)
     time.sleep(4)
 
     for i, username in enumerate(usernamesList):
+        if (i + 1) % 20 == 0:                           #verifica se i é multiplo de 20, nao precisa por varios or or or individual
+            randomTime_large()
+            print(f'A large time has been activated!')
 
-        # if i + 1 < len(usernamesList):
-        #     next_username = usernamesList[i + 1]
-        #     next_username2 = usernamesList[i + 2]
-        # else:
-        #     pass
+        comment = f'@{username[::-1]}'
 
-        comentario = f'@{username}'
-
-        navegador.find_element(By.CLASS_NAME, '_akhn').click()
+        browser.find_element(By.CLASS_NAME, '_akhn').click()
         time.sleep(1)
         
-        campo_comentario = navegador.find_element(By.XPATH, '/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div/div[1]/div/div[2]/div/div[4]/section/div/form/div/textarea')
-        campo_comentario.send_keys(comentario)
+        inputComment = browser.find_element(By.XPATH, '/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div/div[1]/div/div[2]/div/div[4]/section/div/form/div/textarea')
+        inputComment.send_keys(comment)
         time.sleep(2)
 
-        botao_comentar = navegador.find_element(By.XPATH, '/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div/div[1]/div/div[2]/div/div[4]/section/div/form/div/div[2]/div')
-        botao_comentar.click()
+        buttonComment = browser.find_element(By.XPATH, '/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div/div[1]/div/div[2]/div/div[4]/section/div/form/div/div[2]/div')
+        buttonComment.click()
 
-        print(comentario)
-        print("Comentário realizado com sucesso!")
-        tempo_variado()
+        print(comment)
+        print("The comment has been put!")
 
-def fazer_login(url_login, username, password):
-    navegador.get(url_login)
+        random_time()
+
+def do_login(url_login, username, password):
+    browser.get(url_login)
     time.sleep(3)
 
-    campo_usuario = navegador.find_element(By.XPATH, '//*[@id="loginForm"]/div/div[1]/div/label/input')
-    campo_usuario.send_keys(username)
+    inputUser = browser.find_element(By.XPATH, '//*[@id="loginForm"]/div/div[1]/div/label/input')
+    inputUser.send_keys(username)
     time.sleep(2)
 
-    campo_senha = navegador.find_element(By.XPATH, '//*[@id="loginForm"]/div/div[2]/div/label/input')
-    campo_senha.send_keys(password)
+    inputPassword = browser.find_element(By.XPATH, '//*[@id="loginForm"]/div/div[2]/div/label/input')
+    inputPassword.send_keys(password)
     time.sleep(2)
 
-    botao_entrar = navegador.find_element(By.XPATH, '//*[@id="loginForm"]/div/div[3]')
-    botao_entrar.click()
+    joinButton = browser.find_element(By.XPATH, '//*[@id="loginForm"]/div/div[3]')
+    joinButton.click()
 
     time.sleep(10)
 
     try:
-        botao_notificacao = navegador.find_element(By.XPATH, '//*[@id="mount_0_0_KY"]/div/div/div[3]/div/div/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[3]/button[1]')
+        notificationButton = browser.find_element(By.XPATH, '//*[@id="mount_0_0_KY"]/div/div/div[3]/div/div/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[3]/button[1]')
         time.sleep(3)
-        botao_notificacao.click()
+        notificationButton.click()
     except NoSuchElementException:
         pass
 
-    print("LOGADO!")
+    print("Loggin succesfull!")
 
 ############################## CONFIGURATIONS #########################################
 username = "sibayal298"
@@ -78,13 +78,13 @@ listUser_format = []
 for user in usernamesList:
     listUser_format.append(user.strip())
 
-servico = Service(ChromeDriverManager().install())
-navegador = webdriver.Chrome(service=servico)
+serviceDriver = Service(ChromeDriverManager().install())
+browser = webdriver.Chrome(service=serviceDriver)
 
-#######################################################################################
-fazer_login(url_login, username, password)
-comentar_post(listUser_format, url_post)
+################################# MAIN FLOW ######################################################
+do_login(url_login, username, password)
+toComment_post(listUser_format, url_post)
 
 usernamesList.close()
 
-print("Programa finalizado!")
+print("Software closed, thank you!")

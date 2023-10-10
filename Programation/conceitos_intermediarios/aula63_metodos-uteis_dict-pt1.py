@@ -43,4 +43,4 @@ for valor in pessoa.values():
 print('\n')
 
 for chave, valor in pessoa.items():
-    print(f'{chave}: {valor}')
+    print(f'Minha chave: {chave} \nMeu valor: {valor}')

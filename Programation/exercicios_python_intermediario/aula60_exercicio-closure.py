@@ -14,7 +14,7 @@ Crie funções que duplicam, triplicam e quadruplicam o numero recebido como par
 def criar_multiplicar(multiplicador): #valor que fica guardado na memória
     def multiplicar(numero): #valor dinâmico
         return numero * multiplicador
-    return multiplicar
+    return multiplicar 
 
 duplicar = criar_multiplicar(2)
 triplicar = criar_multiplicar(3)

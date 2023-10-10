@@ -48,6 +48,11 @@ print(pessoa3['enderecos'][1])
 
 print()
 
+print(pessoa3['enderecos'][0]['numero'])
+print(pessoa3['enderecos'][1]['rua2'])  
+
+print()
+
 #Voce pode utilizar a leitura do dicionario também em laço:
 for chave in pessoa3:
     print(chave, pessoa3[chave]) #'pessoa3[chave] --> retorna o valor de dentro da chave'

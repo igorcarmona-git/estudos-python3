@@ -8,7 +8,8 @@ d1 = {
     'c2': 2,
 }
 
-d2 = d1 #valores mutáveis ou listas
+#valores mutáveis ou listas, quando utilizamos '=' para valores mutáveis, voce não faz a cópia do valores mas sim aponta para o endereço de memória em que está 'd1'
+d2 = d1
 
 d2['c1'] = 1000
 print(d1) #d1 é afetado tbm ao alterar 'd2', porque aponta para o mesmo conteúdo na memória. 
@@ -21,6 +22,8 @@ teste1 = {
     't2': 2,
     'lista': [0, 1, 2],
 }
+
+#Cópia rasa (shalow copy) só copia os valores imutáveis como string, int, float etc. Agora, se tiver dentro do dicionário uma lista ou dict interno, ele não consegue copiar esses subniveis.
 
 #teste2 = teste1.copy() #shallow (rasa)
 teste2 = copy.deepcopy(teste1) #copia profunda
