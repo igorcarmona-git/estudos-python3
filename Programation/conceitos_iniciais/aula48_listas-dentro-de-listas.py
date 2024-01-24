@@ -26,7 +26,7 @@ for sala in salas:
 
 ########################### Outro exemplo ################################
 
-numeros = [1, 2, 3, 4]
+numeros = [8, 2, 3, 4]
 nomes = ['Alice', 'Bob', 'Carol', 'Dave']
 
 for numero, nome in zip(numeros, nomes):

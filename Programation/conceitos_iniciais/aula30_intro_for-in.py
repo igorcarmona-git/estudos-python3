@@ -9,12 +9,15 @@ senha_digitada = ''
 repeticoes = 0
 
 while True:
+    if repeticoes == 5:
+        break
+    
     if senha_salva != senha_digitada:
-        senha_digitada = input(f"Tentativas --> {repeticoes}x Sua senha: ")
+        senha_digitada = input(f"Tentativas {repeticoes}x  -> Sua senha: ")
 
         repeticoes += 1
         continue
-
+    
     break
     
 print(f"Tentativas executadas: {repeticoes}")

@@ -1,7 +1,7 @@
 frase = "O Python é uma linguagem de programação multiparadigma. Python foi criado por Guido van Rossum"
 
 # Função '.count' --> faz a contagem de caracteres, palavras, etc... 
-print(frase.count('a'))
+print(f'Numero de letras "m" na frase foi: {frase.count('m')}')
 
 #### usando while (iterando na string) ####
 
@@ -20,7 +20,8 @@ while i < len(frase):
 
     qtd_atual = frase.count(letra_atual)    #conta quantas vezes aparece a letra na frase
 
-    if qtd_salvo <= qtd_atual:
+    # Sempre que a quantidade atual for maior, vai trocar com a ja salva
+    if qtd_atual >= qtd_salvo:
         qtd_salvo = qtd_atual
         letra_salvo = letra_atual
 

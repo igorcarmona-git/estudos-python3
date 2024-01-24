@@ -21,8 +21,8 @@ string = 'ABCD'
 lista = ['Fernando', 'Gustavo', 1, 2, 3, 'Igor']
 tupla = ('Python', 'é', 'legal')
 
-primeiro, segundo, *_, antiPenultimo, ultimo = lista 
-print(primeiro, ultimo, antiPenultimo)
+primeiro, segundo, *_, Penultimo, ultimo = lista 
+print(primeiro, ultimo, Penultimo)
 print(f"Aqui eu estou pegando o resto: {_}")
 
 ##################################################################################################################################

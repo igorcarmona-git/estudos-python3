@@ -1,5 +1,5 @@
-# OBS -->   Quando um valor IMUTÁVEL estou copiando o valor quando uso '='
-#           Quando um valor MUTÁVEL estou apontando para o mesmo valor na memória '=' 
+# OBS -->   Quando um valor IMUTÁVEL estou copiando o valor quando uso '=' | str, int, float, etc
+#           Quando um valor MUTÁVEL estou apontando para o mesmo valor na memória '=' | list, tuple
 
 
 lista_a = ["luiz", "Maria"]

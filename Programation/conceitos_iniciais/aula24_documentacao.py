@@ -11,4 +11,8 @@ print(string)
 print(outra_variavel)
 print(len(string))
 
+
+
 print(string.zfill(12)) #Preenche com zeros os campos livres da string
+
+#Se o tamanho da string é 11, vai começar apenas a preencher os zeros, somente depois do tamanho dela.

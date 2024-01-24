@@ -9,7 +9,7 @@ condicao = True
 
 while condicao:
     nome = input('Qual o seu nome: ')
-    print(f'Seu nome é {nome}')
+    print(f'Seu nome é {nome} \n')
 
     if nome == 'sair':
         break #Procura o laço de repetição mais próximo e para o laço.

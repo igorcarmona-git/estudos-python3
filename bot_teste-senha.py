@@ -45,7 +45,7 @@ list_emails = open('C:\\Users\\igorc\\Pictures\\listemails.txt', 'r', encoding='
 list_emails_atualizada = []
 
 for linha in list_emails:
-    texto = linha.strip().lower()
+    texto = linha.strip().lower() #strip --> Corta os espaços do começo e do fim da string | lower --> deixa toda a linha minuscula
     texto = unidecode(texto)
 
     list_emails_atualizada.append(texto)

@@ -20,7 +20,7 @@ novoDigito2 = 0 if (digito > 9 and digito <= 0) else digito # Condição ternár
 print(novoDigito)
 print(novoDigito2)
 
-# É possével fazer o seguinte (Mas não recomendado!)
+# É possível fazer o seguinte (Mas não recomendado!)
 
 print('Valor' if True else 'Outro valor' if True else 'Fim')
 # Vai ser 'Valor' se for verdadeiro, senão será 'Outro valor' e será somente 'Outro valor' se for verdadeiro, senão será 'Fim'

@@ -8,11 +8,11 @@ iter -> me entregue seu iterador
 
 # for letra in texto
 texto = 'Luiz'  # iterável
-iteratador = iter(texto)  # iterator
+iterador = iter(texto)  # iterator
 
 while True:
     try:
-        letra = next(iteratador)
+        letra = next(iterador)
         print(letra)
     except StopIteration:
         break

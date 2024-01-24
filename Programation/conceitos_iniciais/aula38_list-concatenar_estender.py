@@ -20,6 +20,6 @@ lista_c = lista_a + lista_b #Concatenação
 
 print(f"Essa é a lista_c: {lista_c}")
 
-lista_a.extend(lista_b) #O método retorna 'None', isso porque ele estende a variável 'lista_a' e não guarda em uma nova variável.   
+lista_a.extend(lista_b) #O método retorna 'None', isso porque ele extende a variável 'lista_a' e não guarda em uma nova variável.   
 
 print(lista_a)

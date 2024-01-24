@@ -19,26 +19,29 @@ def toComment_post(usernamesList, url_post):
     time.sleep(4)
 
     for i, username in enumerate(usernamesList):
-        if (i + 1) % 20 == 0:                           #verifica se i é multiplo de 20, nao precisa por varios or or or individual
+        if (i + 1) % 15 == 0:                           #verifica se i é multiplo de 20, nao precisa por varios or or or individual
             randomTime_large()
-            print(f'A large time has been activated!')
+            print(f'\nA large time has been activated!\n')
 
-        comment = f'@{username[::-1]}'
+        try:
+            comment = f'@{username}'
 
-        browser.find_element(By.CLASS_NAME, '_akhn').click()
-        time.sleep(1)
-        
-        inputComment = browser.find_element(By.XPATH, '/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div/div[1]/div/div[2]/div/div[4]/section/div/form/div/textarea')
-        inputComment.send_keys(comment)
-        time.sleep(2)
+            browser.find_element(By.CLASS_NAME, '_akhn').click()
+            time.sleep(2)
+            
+            inputComment = browser.find_element(By.XPATH, '/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div/div[1]/div/div[2]/div/div[4]/section/div/form/div/textarea')
+            inputComment.send_keys(comment)
+            time.sleep(2)
 
-        buttonComment = browser.find_element(By.XPATH, '/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div/div[1]/div/div[2]/div/div[4]/section/div/form/div/div[2]/div')
-        buttonComment.click()
+            buttonComment = browser.find_element(By.XPATH, '/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div/div[1]/div/div[2]/div/div[4]/section/div/form/div/div[2]/div')
+            buttonComment.click()
 
-        print(comment)
-        print("The comment has been put!")
+            print(f'\n{i}) {comment}')
+            print(f'The comment has been put!\n')
 
-        random_time()
+            random_time()
+        except:
+            continue
 
 def do_login(url_login, username, password):
     browser.get(url_login)
@@ -64,19 +67,20 @@ def do_login(url_login, username, password):
     except NoSuchElementException:
         pass
 
-    print("Loggin succesfull!")
+    print(f'\nLoggin succesfull!\n')
 
 ############################## CONFIGURATIONS #########################################
 username = "sibayal298"
 password = "siba987654321"
 url_login = 'https://www.instagram.com/accounts/login/'
-url_post = 'https://www.instagram.com/p/CwWHcCWM2xs/'
+url_post = 'https://www.instagram.com/p/CyQtX4ZgNeJ/'
 
 usernamesList = open (r'E:\followers.txt', 'r', encoding='utf-8')
 listUser_format = []
 
 for user in usernamesList:
-    listUser_format.append(user.strip())
+    listUser_format.append(user.strip()) # strip --> Corta os espaços do começo e do fim da string
+random.shuffle(listUser_format) #lista com posições desordenada da original
 
 serviceDriver = Service(ChromeDriverManager().install())
 browser = webdriver.Chrome(service=serviceDriver)
@@ -87,4 +91,4 @@ toComment_post(listUser_format, url_post)
 
 usernamesList.close()
 
-print("Software closed, thank you!")
+print(f'\nSoftware has been closed, thank you!\n')

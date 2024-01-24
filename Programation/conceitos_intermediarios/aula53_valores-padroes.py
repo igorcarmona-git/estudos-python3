@@ -25,9 +25,9 @@ mas sem prejudicar o restante do código.
                 #valor padrão
 def soma2(x, y, z=None):
     if z is not None:
-        print(f"{x=} {y=} {z=} | Total:", x + y + z)
+        print(f"{x=} {y=} {z=} | Total: {x + y + z}")
     else:
-        print(f"{x=} {y=} | Total:", x + y)
+        print(f"{x=} {y=} | Total: {x + y}")
 
 soma2(10, 10)
 soma2(3, 5)

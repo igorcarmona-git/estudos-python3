@@ -16,7 +16,7 @@ velocidade = 61  # velocidade atual do carro
 local_carro = 100  # local em que o carro está na estrada
 
 velocidade_acima_radar1 = (velocidade > RADAR_1)
-dentro_distancia_radar = (local_carro >= (LOCAL_1 - RADAR_RANGE)) and (local_carro <= (LOCAL_1 + RADAR_RANGE))
+dentro_distancia_radar = (local_carro >= (LOCAL_1 - RADAR_RANGE)) and (local_carro <= (LOCAL_1 + RADAR_RANGE)) #raio de distancia
 
 if velocidade_acima_radar1:
     print("Velocidade do carro passou do RADAR 1")
