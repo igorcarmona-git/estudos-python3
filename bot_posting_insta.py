@@ -19,7 +19,7 @@ def toComment_post(usernamesList, url_post):
     time.sleep(4)
 
     for i, username in enumerate(usernamesList):
-        if (i + 1) % 15 == 0:                           #verifica se i é multiplo de 20, nao precisa por varios or or or individual
+        if (i + 1) % 15 == 0:                           #verifica se i é multiplo de 20, nao precisa por varios or or or individuall
             randomTime_large()
             print(f'\nA large time has been activated!\n')
 
